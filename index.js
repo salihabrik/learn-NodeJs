@@ -1,6 +1,7 @@
 const express = require('express');
 
 const app = express();
+app.use(express.json());
 app.get('/', (req, res) => {
 
     res.send("hello this is my first project nodejs ");
@@ -26,6 +27,23 @@ res.send(`the summation is ${summation}`);
 
     
 });
+app.get("/sayHello", (req, res) => {
+    //console.log(req.body);
+
+    console.log(req.query);
+    res.send(`hello ${req.body.name}, Age is ${req.query.age}`);
+
+    
+});
+
+
+
+
+
+
+
+
+
     app.get('/hi', (req, res) => {
         let numbers = "";
         for (let i = 0; i < 100; i++) {
