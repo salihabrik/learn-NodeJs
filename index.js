@@ -56,7 +56,8 @@ app.get("/sayHello", (req, res) => {
         //res.send(`hi you can visited hi the numbers are :${numbers})`); 
         //res.sendFile(__dirname + "/views/numbers.ejs")
         res.render('numbers.ejs', {
-            "name" : "saliaaaaaaaaaaa",
+            "name" : "saliah",
+            "numbers" : numbers,
 
         });
     });
