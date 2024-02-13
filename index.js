@@ -30,10 +30,14 @@ res.send(`the summation is ${summation}`);
 app.get("/sayHello", (req, res) => {
     //console.log(req.body);
 
-    console.log(req.query);
-    res.send(`hello ${req.body.name}, Age is ${req.query.age}`);
+    //console.log(req.query);
+    //res.send(`hello ${req.body.name}, Age is ${req.query.age}`);
 
-    
+    res.json({
+        name: req.body.name,
+        age: req.query.age,
+        language: "arabic"
+    });
 });
 
 
@@ -44,12 +48,17 @@ app.get("/sayHello", (req, res) => {
 
 
 
-    app.get('/hi', (req, res) => {
+    app.get('/numbers', (req, res) => {
         let numbers = "";
         for (let i = 0; i < 100; i++) {
             numbers += i + '|';
         }
-res.send(`hi you can visited hi the numbers are :${numbers})`); 
+        //res.send(`hi you can visited hi the numbers are :${numbers})`); 
+        //res.sendFile(__dirname + "/views/numbers.ejs")
+        res.render('numbers.ejs', {
+            "name" : "saliaaaaaaaaaaa",
+
+        });
     });
 
 
