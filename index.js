@@ -17,6 +17,15 @@ app.delete('/test', (req, res) => {
     res.send("you can delete test ");
 })
 
+app.get("/findSummations/:number1/:number2", (req, res) => {
+    const num1 = req.params.number1;
+    const num2 = req.params.number2;
+    const summation = Number(num1) + Number(num2);
+
+res.send(`the summation is ${summation}`);
+
+    
+});
     app.get('/hi', (req, res) => {
         let numbers = "";
         for (let i = 0; i < 100; i++) {
