@@ -67,13 +67,14 @@ articleApp.get('/articles', (req, res) => {
     res.send("The new article has been stored");
 });
 
+
 articleApp.listen(3002, () => {
     console.log("Listening on port 3002 for articles endpoints");
 });
 
 
 
-/*const express = require('express');
+*const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 app.use(express.json());
@@ -82,7 +83,7 @@ const Aricle = require('./models/Article.js');
 
 
 
-//mongodb+srv:/<password>@cluster0.tir8gti.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv:/<password>@cluster0.tir8gti.mongodb.net/?retryWrites=true&w=majority
 mongoose
 .connect("mongodb+srv:")
 .then(() => {
