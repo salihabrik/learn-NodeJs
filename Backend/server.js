@@ -53,6 +53,15 @@ app.get('/getall', (req, res)=>{
         )
 });
 
+app.get('/all' , async (req, res)=>{
+    try {
+        users = await User.find({ age: 22});
+        res.send(users);
+    } catch (error) {
+        res.send(error);
+    }
+})
+
 app.put('/update', ()=>{
     console.log('update work');
 });
