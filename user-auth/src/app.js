@@ -44,6 +44,7 @@ app.post('/login', async (req, res) => {
     catch (error) {
         res.status(500).send({message: error.message})
     }});
+    
 app.listen(port, () => {
     console.log('Server running on port 3000')
 });
