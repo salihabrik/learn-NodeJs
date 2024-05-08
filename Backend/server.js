@@ -77,21 +77,7 @@ app.get('/getbyid/:id', (req, res)=>{
             }
         )
 });
-app.get('/getbyid/:id', (req, res)=>{
-    myid - req.params.id;
 
-    User.findOne({ _id: myid })
-        .then(
-            (user)=>{
-                res.send(user);
-            }
-        )
-        .catch(
-            (err)=>{
-                res.send(err);
-            }
-        )
-});
 
 app.put('/update', ()=>{
     console.log('update work');
