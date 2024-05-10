@@ -37,7 +37,7 @@ app.post('/create' ,async (req, res)=>{
 
 
 
-)
+);
 
 app.get('/getall', (req, res)=>{
     User.find()
@@ -64,6 +64,7 @@ app.post('/create' ,async (req, res)=>{
         res.send(error);
     }
 }
+)
 app.get('/all' , async (req, res)=>{
     try {
         users = await User.find({ age: 22});
