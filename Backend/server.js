@@ -89,7 +89,22 @@ app.get('/getbyid/:id', (req, res)=>{
             }
         )
 });
-
+app.post('/add', (req, res)=>{
+    data = req.body;
+    usr = new User(data);
+    usr.save()
+   
+        .then(
+            (savedUsers)=>{
+                res.send(savedUsers);
+            }
+        )
+        .catch(
+            (err)=>{
+                res.send(err);
+            }
+        )
+});
 
 app.put('/update', ()=>{
     console.log('update work');
