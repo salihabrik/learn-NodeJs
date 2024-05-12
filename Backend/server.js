@@ -52,19 +52,7 @@ app.get('/getall', (req, res)=>{
             }
         )
 });
-app.post('/create' ,async (req, res)=>{
-    try {
-        data = req.body;
-        usr = new User(data);
 
-        savedUsers = await usr.save();
-        res.send(savedUsers);
-
-    } catch (error) {
-        res.send(error);
-    }
-}
-)
 app.get('/all' , async (req, res)=>{
     try {
         users = await User.find({ age: 22});
